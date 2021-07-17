@@ -59,6 +59,7 @@ if __name__ == "__main__":
     pc = PointCloud()
     #pc.create_rgbd()
 
+
     point_cloud = pc.create_pcd()
     np_points = np.asarray(point_cloud)
     print(np_points.shape)

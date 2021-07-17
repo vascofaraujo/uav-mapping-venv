@@ -53,21 +53,21 @@ class PointCloud():
 
 
     def visualize_pcd(self, xyz, color):
-        # pcd = o3d.geometry.PointCloud()
-        # pcd.points = o3d.utility.Vector3dVector(xyz)
-        # pcd.transform([[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]])
-        #
-        # o3d.io.write_point_cloud("pcd.ply", pcd)
-        #
-        # pcd_load = o3d.io.read_point_cloud("pcd.ply")
-        # o3d.visualization.draw_geometries([pcd_load])
+        pcd = o3d.geometry.PointCloud()
+        pcd.points = o3d.utility.Vector3dVector(xyz)
+        pcd.colors = o3d.utility.Vector3dVector(color)
 
-        ax = plt.axes(projection='3d')
-        ax.scatter(xyz[:,0], xyz[:,1], xyz[:,2], c = color, s=0.01)
-        plt.show()
+        pcd.transform([[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]])
+
+        o3d.io.write_point_cloud("pcd.ply", pcd)
+
+        pcd_load = o3d.io.read_point_cloud("pcd.ply")
+        o3d.visualization.draw_geometries([pcd_load])
+
 
 if __name__ == "__main__":
     pc = PointCloud()
 
     xyz, color = pc.get_xyz()
+
     pc.visualize_pcd(xyz, color)
