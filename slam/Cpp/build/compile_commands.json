@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/renato/Documents/git-repo/Point_cloud/Cpp/build",
+  "command": "/bin/c++   -isystem /usr/local/include/opencv4  -g   -o CMakeFiles/main.dir/main.cpp.o -c /home/renato/Documents/git-repo/Point_cloud/Cpp/main.cpp",
+  "file": "/home/renato/Documents/git-repo/Point_cloud/Cpp/main.cpp"
+}
+]
