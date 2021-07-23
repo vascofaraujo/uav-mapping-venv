@@ -5,13 +5,13 @@ import open3d as o3d
 
 
 def read_rgbd():
-    images_path = os.getcwd() + "/images/newpiv/"
+    images_path = os.getcwd() + "/images/escritorio/"
     rgbd_array = []
 
-    for i in range(3,10):
-        img = o3d.io.read_image(images_path+ "rgb_image_" + str(i) + ".png")
+    for i in range(1,7):
+        img = o3d.io.read_image(images_path+ "img-" + str(i) + ".jpg")
         img = np.asarray(img)
-        depth = o3d.io.read_image(images_path+ "depth_" + str(i) + ".png")
+        depth = o3d.io.read_image(images_path+ "depth-" + str(i) + ".jpg")
         depth = np.asarray(depth)
         depth  = np.uint8(depth*(255/depth.max()))
 
