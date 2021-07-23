@@ -1,7 +1,7 @@
 import freenect
 import cv2 as cv
 import numpy as np
-import time
+# import time
 
 def get_video():
     array,_ = freenect.sync_get_video()
@@ -11,18 +11,21 @@ def get_video():
 #function to get depth image from kinect
 def get_depth():
     array,_ = freenect.sync_get_depth()
-    #array = array.astype(np.uint8)
+    array = array.astype(np.uint8)
     return array
 
 while True:
     frame = get_video()
     depth = get_depth()
 
-    nameImg = str(time.time()) + ".jpg"
+    i = 0
+
+    # nameImg = str(time.time()) + ".jpg"
     #Save image when "q" is pressed
     if cv.waitKey(30) & 0xFF == ord('q'):
-        cv.imwrite("img-" + nameImg,frame)
-        cv.imwrite("depth-" + nameImg,depth)
+        cv.imwrite("img-" + str(i) + ".png",frame)
+        cv.imwrite("depth-" + str(i) + ".png",depth)
+        i += 1
         print("Captured")
         cv.waitKey(0)
 
