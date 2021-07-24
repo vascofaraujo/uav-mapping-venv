@@ -1,0 +1,11 @@
+[2021-07-23 14:49:42.996] [some_logger_name] [info] 0 * 0 equals          0
+[2021-07-23 14:49:42.996] [some_logger_name] [info] 1 * 1 equals          1
+[2021-07-23 14:49:42.996] [some_logger_name] [info] 2 * 2 equals          4
+[2021-07-23 14:49:42.996] [some_logger_name] [info] 3 * 3 equals          9
+[2021-07-23 14:49:42.996] [some_logger_name] [info] 4 * 4 equals         16
+[2021-07-23 14:49:42.996] [some_logger_name] [info] 5 * 5 equals         25
+[2021-07-23 14:49:42.996] [some_logger_name] [info] 6 * 6 equals         36
+[2021-07-23 14:49:42.996] [some_logger_name] [info] 7 * 7 equals         49
+[2021-07-23 14:49:42.996] [some_logger_name] [info] 8 * 8 equals         64
+[2021-07-23 14:49:42.996] [some_logger_name] [info] 9 * 9 equals         81
+[+++] [14:49:42 +01:00] [thread 12355] End of example.

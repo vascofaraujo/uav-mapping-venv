@@ -1,0 +1,2 @@
+[2021-07-23 14:49:42.996] [basic_logger] [info] Some log message
+[+++] [14:49:42 +01:00] [thread 12355] End of example.
