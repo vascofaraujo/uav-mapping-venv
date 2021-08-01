@@ -1,0 +1,2 @@
+/usr/bin/ar qc libflexibleInitializer.a  CMakeFiles/flexibleInitializer.dir/src/FlexibleInitializer.cpp.o
+/usr/bin/ranlib libflexibleInitializer.a

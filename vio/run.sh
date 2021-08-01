@@ -1,0 +1,1 @@
+~/Documents/git-repo/LARVIO/build/larvio ~/Documents/git-repo/LARVIO/MH_01/mav0/imu0/data.csv ~/Documents/git-repo/LARVIO/MH_01/mav0/cam0/data.csv ~/Documents/git-repo/LARVIO/MH_01/mav0/cam0/data ~/LARVIO/config/euroc.yaml
