@@ -8,38 +8,6 @@ A single-thread toyish example as well as a ROS nodelet package for LARVIO is pr
 Notice that Hamilton quaternion is utilized in LARVIO, which is a little bit different from the JPL quaternion used in traditional MSCKF community. The filter formulation is thus derivated from scratch. Please check our [CJA2020](https://www.sciencedirect.com/science/article/pii/S1000936120301722) and [Senors2019](https://www.mdpi.com/1424-8220/19/8/1941/htm) papers for details.
 
 
-## Results
-#### 1) Demo on EuRoC
-![LARVIO on EuRoC](https://github.com/PetWorm/LARVIO/blob/master/results/euroc_x8.gif)
-
-#### 2) Trajectories RMSEs
-This is the results of an earlier version of LARVIO. Due to the changes, the current repo might not reproduce the exact results as below. 
-
-RMSE on EuRoC dataset are listed. 
-
-Evaluations below are done using [PetWorm/sim3_evaluate_tool](https://github.com/PetWorm/sim3_evaluate_tool).
-
-In the newest update, online imu-cam extrinsic and timestamp error calibration in VINS-MONO are turned on to explore its extreme ability. While in this setup, the V102 sequence would somehow fail. The result of VINS-MONO in V102 below is of setup without online calibration.
-
-Results of our algorithm are repeatible in every run of every computer I tested so far.
-
-![comparison](https://github.com/PetWorm/LARVIO/blob/master/results/comparison.jpg)
-
-#### 3) TUM-VI Dataset
-<img src="https://github.com/PetWorm/LARVIO/blob/master/results/tumvi_c_1.jpg" width="50%">
-
-#### 4) UZH-FPV Dataset
-<img src="https://github.com/PetWorm/LARVIO/blob/master/results/uzhfpv_o_f_3.jpg" width="50%">
-
-
-## Cross Platform Performance
-This package has been successfully deployed on ARM (Jetson Nano and Jetson TX2, realtime without GPU refinement). The performances are comparable to the results on PCs.
-
-Below is the exper1ment result in our office. A TX2-based multi-thread CPU-only implementation without ROS was developed here. We used [MYNT-EYE-D](https://github.com/slightech/MYNT-EYE-D-SDK) camera SDK to collect monocular images and IMU data, and estimate the camera poses in realtime. We walk around out the office to the corridor or the neighbor room, and return to the start point (in white circle) for a couple of times.
-
-![TX2 implementation](https://github.com/PetWorm/LARVIO/blob/master/results/TX2_result.png)
-
-
 ## Acknowledgement
 This repo is for academic use only.
 
@@ -110,12 +78,6 @@ Open a new terminal to play the dataset:
 ```
 rosbag play MH_01_easy.bag
 ```
-
-
-## Docker
-A `Dockerfile` is provided in `LARVIO/docker`. After building it, you need to load dateset and modify the `run.sh` in container to run toyish example, or use 'roslaunch' to run the ROS package. Also, GUI is needed in the host to display the Pangolin and rviz view.
-
-There is another VNC docker image which is convinent for monitoring the rviz view. Click [petworm/vnc-larvio-playground](https://hub.docker.com/r/petworm/vnc-larvio-playground) to directly pull this image, or build it from source with [PetWorm/docker-larvio-playground](https://github.com/PetWorm/docker-larvio-playground).
 
 
 ## Related Works
