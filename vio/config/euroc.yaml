@@ -1,10 +1,10 @@
 %YAML:1.0
 
 # output directory
-output_dir: "~/Documents/git-repo/LARVIO/results/"
+output_dir: "~/Documents/git-repo/uav-mapping-venv/vio/results/"
 
 # switches
-if_FEJ: 0    # 0(false) or 1(true)
+if_FEJ: 1   # 0(false) or 1(true)
 estimate_extrin: 1    # 0(false) or 1(true)
 estimate_td: 1    # 0(false) or 1(true)
 calib_imu_instrinsic: 0   # 0(false) or 1(true)
